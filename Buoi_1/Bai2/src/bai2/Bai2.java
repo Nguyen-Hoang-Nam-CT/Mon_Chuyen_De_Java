@@ -23,23 +23,22 @@ public class Bai2 {
      */
     static Scanner s = new Scanner(System.in);
     
-    public int CheckTGCan(float a,float b,float c)//test thử cách viết hàm
+    public static  int CheckTGCan(float a,float b,float c)//test thử cách viết hàm
     {
         if(a == b || a == c || b == c)
             return 1;
         else
             return 0;
     }
-    public int SoSanhBP1CVoi2CCL(float a, float b,float c)// hàm so sánh bình phương một cạnh với 2 cạnh còn lại
+    public static int SoSanhBP1CVoi2CCL(float a, float b,float c)// hàm so sánh bình phương một cạnh với 2 cạnh còn lại
     {
         if(a*a == (b*b + c*c))
             return 1;
         else
             return 0;
     }
-    public static void main(String[] args) {
-        
-        Bai2 b2 = new Bai2();
+    public static void main(String[] args) 
+    {
         float a,b,c;
         System.out.print("\nNhap canh a: ");
         a = s.nextFloat();
@@ -52,9 +51,9 @@ public class Bai2 {
         {
             if(a == b && a == c && b == c)
                 System.out.print("\n3 canh vua nhap tao thanh tam giac deu");
-            else if(b2.CheckTGCan(a, b, c) == 1)
+            else if(Bai2.CheckTGCan(a, b, c) == 1)
                 System.out.print("\n3 canh vua nhap tao thanh tam giac can");
-            else if(b2.SoSanhBP1CVoi2CCL(a, b, c) == 1 || b2.SoSanhBP1CVoi2CCL(b, a, c) == 1 || b2.SoSanhBP1CVoi2CCL(c, b, a) == 1)
+            else if(Bai2.SoSanhBP1CVoi2CCL(a, b, c) == 1 || Bai2.SoSanhBP1CVoi2CCL(b, a, c) == 1 || Bai2.SoSanhBP1CVoi2CCL(c, b, a) == 1)
                 System.out.print("\n3 Canh vua nhap tao thanh tam giac vuong");
             else
                 System.out.println("\n3 canh vua nhap tao thanh tam giac thuong");
